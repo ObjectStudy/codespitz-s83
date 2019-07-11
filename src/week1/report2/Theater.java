@@ -20,10 +20,7 @@ public class Theater{
   public void setTicket( TicketOffice ticketOffice, Movie movie ,  Long num){
     if(!ticketOffices.contains(ticketOffice)) return;
     if(!movies.contains(movie)) return;
-    while(num-- > 0) {
-      movie.addTicket();
-    }
-    ticketOffice.setMovies(movie);
+    ticketOffice.addTicket(movie , num);
   }
   
   public void setInvitation(Audience audience , Movie movie){

@@ -16,7 +16,6 @@ public class Ticket {
     }
   }
   public Long getFee(){
-    if(Movie.EMPTY == movie) return 0L;
-    else return movie.getFee();
+    return movie.getFee();
   }
 }
