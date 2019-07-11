@@ -26,4 +26,11 @@ public class Theater{
     ticketOffice.setMovies(movie);
   }
   
+  public void setInvitation(Audience audience , Movie movie){
+    audience.setInvitation(new Invitation(movie));
+  }
+  public boolean enter(Audience audience , Movie movie){
+    Ticket ticket = audience.getTicket();
+    return ticket.isValid(movie);
+  }
 }

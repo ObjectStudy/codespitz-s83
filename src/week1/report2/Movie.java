@@ -19,14 +19,6 @@ public class Movie {
     this.tickets.add(new Ticket(this));
   }
   
-  public void setInvitation(Audience audience){
-    audience.setInvitation(new Invitation(this));
-  }
-  public boolean enter(Audience audience){
-    Ticket ticket = audience.getTicket();
-    return ticket.isValid(this);
-  }
-  
   public Ticket getTickets() {
     if(tickets.size() == 0) return Ticket.EMPTY;
     else {

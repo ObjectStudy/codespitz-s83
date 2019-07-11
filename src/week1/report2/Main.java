@@ -17,16 +17,16 @@ public class Main {
     theater.setTicket(ticketOffice, movie2, 50L);
     
     
-    movie1.setInvitation(audience1);
+    theater.setInvitation(audience1 , movie1);
     seller.setTicketOffice(ticketOffice);
     
     audience1.buyTicket(seller , movie1);
     audience2.buyTicket(seller , movie2);
     
-    boolean isOk1 = movie1.enter(audience1);
-    boolean isOk2 = movie2.enter(audience1);
-    boolean isOk3 = movie1.enter(audience2);
-    boolean isOk4 = movie2.enter(audience2);
+    boolean isOk1 = theater.enter(audience1 ,movie1);
+    boolean isOk2 = theater.enter(audience1 ,movie2);
+    boolean isOk3 = theater.enter(audience2 ,movie1);
+    boolean isOk4 = theater.enter(audience2 ,movie2);
     
     System.out.println(isOk1);//true
     System.out.println(isOk2);//false
