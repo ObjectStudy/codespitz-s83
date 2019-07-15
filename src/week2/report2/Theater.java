@@ -8,7 +8,10 @@ import java.util.Set;
 public class Theater {
   public static final Set<Screening> EMPTY = new HashSet<>();
   private final Set<TicketOffice> ticketOffices = new HashSet<>();
-  private final Map<Movie, Set<Screening>> movies = new HashMap<>();
+  private final Set<Auditorium> auditoriums = new HashSet<>();
+  //private final Map<Movie, Set<Screening>> movies = new HashMap<>();
+  private final Map<Movie, Set<Auditorium>> movies = new HashMap<>();
+  
   private Money amount;
 
   public Theater(Money amount) {
@@ -22,10 +25,14 @@ public class Theater {
     return true;
   }
 
-  public boolean addScreening(Movie movie, Screening screening) {
+  public boolean addScreening(Movie movie, Auditorium auditorium, Screening screening) {
     if (!movies.containsKey(movie))
       return false;
-    return movies.get(movie).add(screening);
+    if (!auditoriums.contains(auditorium))
+      return false;
+    
+    auditorium.addScreening(screening);
+    return movies.get(movie).add(auditorium);
   }
 
   public boolean contractTicketOffice(TicketOffice ticketOffice, Double rate) {
@@ -44,10 +51,11 @@ public class Theater {
     this.amount = this.amount.plus(amount);
   }
 
-  public Set<Screening> getScreening(Movie movie) {
-    if (!movies.containsKey(movie) || movies.get(movie).size() == 0)
+  public Set<Screening> getScreening(Movie movie , Auditorium auditorium) {
+    if (!movies.containsKey(movie) || movies.get(movie).size() == 0 || !movies.get(movie).contains(auditorium))
       return EMPTY;
-    return movies.get(movie);
+    
+    return auditorium.getScreening();
   }
 
   boolean isValidScreening(Movie movie, Screening screening) {
@@ -67,4 +75,10 @@ public class Theater {
     return new Reservation(this, movie, screening, count);
   }
 
+  public boolean addAuditorium(Auditorium auditorium) {
+    if (auditoriums.contains(auditorium))
+      return false;
+    return auditoriums.add(auditorium);
+  }
+  
 }
