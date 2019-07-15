@@ -12,6 +12,6 @@ public class PeriodAmountDiscount extends AmountDiscount {
 
   @Override
   public boolean isSatisfiedBy(Screening screening, int audienceCount) {
-    return screening.whenScreened == whenScreened;
+    return screening.whenScreened.equals(whenScreened);
   }
 }
