@@ -1,17 +1,24 @@
 package week2.report1;
 
-import java.time.LocalDateTime;
+import java.time.DayOfWeek;
+import java.time.LocalTime;
 
 public class PeriodPercentDiscount extends PercentDiscount {
-  private final LocalDateTime whenScreened;
+  private final DayOfWeek dayOfWeek;
+  private final LocalTime startTime;
+  private final LocalTime endTime;
 
-  public PeriodPercentDiscount(double pecent, LocalDateTime whenScreened) {
+  public PeriodPercentDiscount(double pecent, DayOfWeek dayOfWeek, LocalTime startTime, LocalTime endTime) {
     super(pecent);
-    this.whenScreened = whenScreened;
+    this.dayOfWeek = dayOfWeek;
+    this.startTime = startTime;
+    this.endTime = endTime;
   }
 
   @Override
   public boolean isSatisfiedBy(Screening screening, int audienceCount) {
-    return screening.whenScreened.equals(whenScreened);
+	  return dayOfWeek.equals(screening.whenScreened.getDayOfWeek())
+    	&& startTime.compareTo(screening.whenScreened.toLocalTime()) <= 0
+    	&& endTime.compareTo(screening.whenScreened.toLocalTime()) > 0 ;
   }
 }

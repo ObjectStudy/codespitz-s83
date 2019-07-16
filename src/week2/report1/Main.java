@@ -1,7 +1,9 @@
 package week2.report1;
 
+import java.time.DayOfWeek;
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class Main {
   public static void main(String[] args) {
@@ -29,10 +31,12 @@ public class Main {
     }
     
     //Period 할인
-    LocalDateTime saleTime = LocalDateTime.of(2019, 7, 20, 13, 00, 00);
+    DayOfWeek dayOfWeek = DayOfWeek.valueOf(DayOfWeek.MONDAY.name());
+    LocalTime startTime =LocalTime.of(10, 0, 0);
+    LocalTime endTime =LocalTime.of(23, 0, 0);
+
     Movie<AmountDiscount> periodMovie = new Movie<AmountDiscount>("aladin", Duration.ofMinutes(120L), Money.of(5000.0),
-        new PeriodAmountDiscount(Money.of(1000.0), saleTime)
-        );
+        new PeriodAmountDiscount(Money.of(1000.0), dayOfWeek , startTime ,endTime));
     theater.addMovie(periodMovie);
     for (int day = 7; day < 32; day++) {
       for (int hour = 10, seq = 1; hour < 24; hour += 3, seq++) {
@@ -74,16 +78,19 @@ public class Main {
     }
     //시간
     for (Screening screening : theater.getScreening(periodMovie)) {
-      if(screening.whenScreened.equals(saleTime)) {//할인시간 조건 만존
+      if(screening.whenScreened.getDayOfWeek().equals(dayOfWeek)) {//할인시간 조건 만존
         customer3_ok.reverse(seller, theater, periodMovie, screening, 2); // 5000 *2 - 2000 = 8000
         boolean isOk = theater.enter(customer3_ok, 2);
         System.out.println("customer3_ok : "+ isOk);
-        continue;
+        break;
       }
-      customer3_false.reverse(seller, theater, periodMovie, screening, 2); // 5000 *2 = 10000
-      boolean isOk = theater.enter(customer3_false, 2);
-      System.out.println("customer3_false : "+ isOk);
-      break;
     }
+    
+    for (Screening screening : theater.getScreening(periodMovie)) {
+        customer3_false.reverse(seller, theater, periodMovie, screening, 2); // 5000 *2 = 10000
+        boolean isOk = theater.enter(customer3_false, 2);
+        System.out.println("customer3_false : "+ isOk);
+        break;
+      }
   }
 }
