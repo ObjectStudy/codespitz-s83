@@ -25,10 +25,12 @@ public class Main {
     seller.setTicketOffice(ticketOffice);
     Customer customer = new Customer(Money.of(20000.0));
     for (Screening screening : theater.getScreening(movie , auditorium)) {
-      customer.reverse(seller, theater, movie, screening, 2);
+      customer.reverse(seller, theater, movie, auditorium , screening, 2);
       boolean isOk = theater.enter(customer, 2);
-      System.out.println(isOk);
+      System.out.println(isOk);//true
+      System.out.println(auditorium.getSeat(screening));//98
       break;
     }
+    
   }
 }

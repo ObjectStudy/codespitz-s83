@@ -9,7 +9,6 @@ public class Theater {
   public static final Set<Screening> EMPTY = new HashSet<>();
   private final Set<TicketOffice> ticketOffices = new HashSet<>();
   private final Set<Auditorium> auditoriums = new HashSet<>();
-  //private final Map<Movie, Set<Screening>> movies = new HashMap<>();
   private final Map<Movie, Set<Auditorium>> movies = new HashMap<>();
   
   private Money amount;
@@ -58,21 +57,21 @@ public class Theater {
     return auditorium.getScreening();
   }
 
-  boolean isValidScreening(Movie movie, Screening screening) {
-    return movies.containsKey(movie) && movies.get(movie).contains(screening);
+  boolean isValidScreening(Movie movie , Auditorium auditorium , Screening screening) {
+    return movies.containsKey(movie)  && movies.get(movie).contains(auditorium) && auditorium.getScreening().contains(screening) ;
   }
 
   public boolean enter(Customer customer, int count) {
     Reservation reservation = customer.reservation;
     return reservation != Reservation.NONE && reservation.theater == this
-        && isValidScreening(reservation.movie, reservation.screening) && reservation.count == count;
+        && isValidScreening(reservation.movie, reservation.auditorium, reservation.screening) && reservation.count == count;
   }
 
-  Reservation reserve(Movie movie, Screening screening, int count) {
-    if (!isValidScreening(movie, screening) || !screening.hasSeat(count))
+  Reservation reserve(Movie movie, Auditorium auditorium , Screening screening, int count) {
+    if (!isValidScreening(movie, auditorium , screening) || !auditorium.hasSeat(screening , count))
       return Reservation.NONE;
-    screening.reserveSeat(count);
-    return new Reservation(this, movie, screening, count);
+    auditorium.reserveSeat(screening , count);
+    return new Reservation(this, movie, auditorium , screening, count);
   }
 
   public boolean addAuditorium(Auditorium auditorium) {

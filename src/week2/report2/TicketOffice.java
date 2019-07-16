@@ -25,11 +25,11 @@ public class TicketOffice {
     return true;
   }
 
-  Reservation reserve(Theater theater, Movie movie, Screening screening, int count) {
-    if (!commissionRate.containsKey(theater) || !theater.isValidScreening(movie, screening)
-        || !screening.hasSeat(count))
+  Reservation reserve(Theater theater, Movie movie, Auditorium auditorium, Screening screening, int count) {
+    if (!commissionRate.containsKey(theater) || !theater.isValidScreening(movie, auditorium, screening)
+        || !auditorium.hasSeat(screening, count))
       return Reservation.NONE;
-    Reservation reservation = theater.reserve(movie, screening, count);
+    Reservation reservation = theater.reserve(movie, auditorium, screening, count);
     if (reservation != Reservation.NONE) {
       Money sales = movie.calculateFee(screening, count);
       Money commission = sales.multi(commissionRate.get(theater));

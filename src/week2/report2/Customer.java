@@ -8,9 +8,9 @@ public class Customer {
     this.amount = amount;
   }
 
-  public void reverse(TicketSeller seller, Theater theater, Movie movie, Screening screening,
+  public void reverse(TicketSeller seller, Theater theater, Movie movie, Auditorium auditorium, Screening screening,
       int count) {
-    reservation = seller.reserve(this, theater, movie, screening, count);
+    reservation = seller.reserve(this, theater, movie, auditorium, screening, count);
   }
 
   boolean hasAmount(Money amount) {

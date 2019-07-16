@@ -2,6 +2,7 @@ package week2.report2;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 
 public class Auditorium {
@@ -18,18 +19,22 @@ public class Auditorium {
     return true;
     
   }
-  public void getScreening() {
-    aa
+  public Set<Screening> getScreening() {
+    return this.screenings.keySet();
   }
   
-  /*boolean hasSeat(int count) {
-    return seat >= count;
+  boolean hasSeat(Screening screening , int count) {
+    return screenings.get(screening) >= count;
   }
 
-  void reserveSeat(int count) {
-    if (hasSeat(count))
-      seat -= count;
+  void reserveSeat(Screening screening , int count) {
+    if (hasSeat(screening , count))
+      screenings.put(screening , screenings.get(screening) - count);
     else
       throw new RuntimeException("no seat");
-  }*/
+  }
+  
+  public Long getSeat(Screening screening) {
+	  return screenings.get(screening);
+  }
 }

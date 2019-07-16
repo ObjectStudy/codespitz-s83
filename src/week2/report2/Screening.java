@@ -12,16 +12,4 @@ public class Screening {
     this.whenScreened = when;
     
   }
-  
-  
-  /*boolean hasSeat(int count) {
-    return seat >= count;
-  }
-
-  void reserveSeat(int count) {
-    if (hasSeat(count))
-      seat -= count;
-    else
-      throw new RuntimeException("no seat");
-  }*/
 }
