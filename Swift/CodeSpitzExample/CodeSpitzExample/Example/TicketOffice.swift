@@ -1,9 +1,5 @@
 import Foundation
 
-enum TicketError: Error {
-    case noTickets
-}
-
 class TicketOffice {
     private var amount: Long
     private var tickets = [Ticket]()
@@ -26,6 +22,8 @@ class TicketOffice {
         }
     }
     
+    // TicketOffice 는 Invitation 에 대해 모른다.
+    // VIP, 연간회원등 추가될 정책을 모두 수용할려면 Invitation 에 구체적인 정보를 몰라야 한다.
     func getTicketWithNoFee() -> Ticket {
         if tickets.isEmpty {
             return Ticket.empty
