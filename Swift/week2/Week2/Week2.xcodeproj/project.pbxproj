@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD7B854923594F8C00ABEA3C /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B854823594F8C00ABEA3C /* Array+.swift */; };
+		BD7B854B2359503000ABEA3C /* Dictionary+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B854A2359503000ABEA3C /* Dictionary+.swift */; };
+		BD7B85502359587300ABEA3C /* MemoryHashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B854F2359587300ABEA3C /* MemoryHashable.swift */; };
+		BD7B855223595A9D00ABEA3C /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B855123595A9D00ABEA3C /* Date+.swift */; };
 		BD81075A2358CC5F006B1A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8107592358CC5F006B1A12 /* AppDelegate.swift */; };
 		BD81075C2358CC5F006B1A12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81075B2358CC5F006B1A12 /* SceneDelegate.swift */; };
 		BD81075E2358CC5F006B1A12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81075D2358CC5F006B1A12 /* ViewController.swift */; };
@@ -15,7 +19,20 @@
 		BD8107662358CC61006B1A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8107652358CC61006B1A12 /* Assets.xcassets */; };
 		BD8107692358CC61006B1A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD8107672358CC61006B1A12 /* LaunchScreen.storyboard */; };
 		BD8107742358CC61006B1A12 /* Week2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8107732358CC61006B1A12 /* Week2Tests.swift */; };
-		BD81077F2358CC61006B1A12 /* Week2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81077E2358CC61006B1A12 /* Week2UITests.swift */; };
+		BD81078F2358CD16006B1A12 /* AmountDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81078E2358CD16006B1A12 /* AmountDiscount.swift */; };
+		BD8107912358CD27006B1A12 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8107902358CD27006B1A12 /* Customer.swift */; };
+		BD8107932358CD34006B1A12 /* DiscountCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8107922358CD34006B1A12 /* DiscountCondition.swift */; };
+		BD8107952358CD41006B1A12 /* DiscountPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8107942358CD41006B1A12 /* DiscountPolicy.swift */; };
+		BD8107972358CDA0006B1A12 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8107962358CDA0006B1A12 /* Money.swift */; };
+		BD8107992358CDAC006B1A12 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8107982358CDAC006B1A12 /* Movie.swift */; };
+		BD81079B2358CDB9006B1A12 /* PercentDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81079A2358CDB9006B1A12 /* PercentDiscount.swift */; };
+		BD81079D2358CDDC006B1A12 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81079C2358CDDC006B1A12 /* Reservation.swift */; };
+		BD81079F2358CDE7006B1A12 /* Screening.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81079E2358CDE7006B1A12 /* Screening.swift */; };
+		BD8107A12358CDF2006B1A12 /* SequenceAmountDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8107A02358CDF2006B1A12 /* SequenceAmountDiscount.swift */; };
+		BD8107A32358CDFE006B1A12 /* SequencePercentDiscount.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8107A22358CDFE006B1A12 /* SequencePercentDiscount.swift */; };
+		BD8107A52358CE11006B1A12 /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8107A42358CE11006B1A12 /* Theater.swift */; };
+		BD8107A72358CE1D006B1A12 /* TicketOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8107A62358CE1D006B1A12 /* TicketOffice.swift */; };
+		BD8107A92358CE28006B1A12 /* TicketSeller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8107A82358CE28006B1A12 /* TicketSeller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +43,13 @@
 			remoteGlobalIDString = BD8107552358CC5F006B1A12;
 			remoteInfo = Week2;
 		};
-		BD81077B2358CC61006B1A12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BD81074E2358CC5F006B1A12 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BD8107552358CC5F006B1A12;
-			remoteInfo = Week2;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD7B854823594F8C00ABEA3C /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		BD7B854A2359503000ABEA3C /* Dictionary+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+.swift"; sourceTree = "<group>"; };
+		BD7B854F2359587300ABEA3C /* MemoryHashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryHashable.swift; sourceTree = "<group>"; };
+		BD7B855123595A9D00ABEA3C /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		BD8107562358CC5F006B1A12 /* Week2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD8107592358CC5F006B1A12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD81075B2358CC5F006B1A12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,9 +62,20 @@
 		BD81076F2358CC61006B1A12 /* Week2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Week2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD8107732358CC61006B1A12 /* Week2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week2Tests.swift; sourceTree = "<group>"; };
 		BD8107752358CC61006B1A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD81077A2358CC61006B1A12 /* Week2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Week2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD81077E2358CC61006B1A12 /* Week2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week2UITests.swift; sourceTree = "<group>"; };
-		BD8107802358CC61006B1A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD81078E2358CD16006B1A12 /* AmountDiscount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountDiscount.swift; sourceTree = "<group>"; };
+		BD8107902358CD27006B1A12 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		BD8107922358CD34006B1A12 /* DiscountCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCondition.swift; sourceTree = "<group>"; };
+		BD8107942358CD41006B1A12 /* DiscountPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountPolicy.swift; sourceTree = "<group>"; };
+		BD8107962358CDA0006B1A12 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		BD8107982358CDAC006B1A12 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		BD81079A2358CDB9006B1A12 /* PercentDiscount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentDiscount.swift; sourceTree = "<group>"; };
+		BD81079C2358CDDC006B1A12 /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		BD81079E2358CDE7006B1A12 /* Screening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screening.swift; sourceTree = "<group>"; };
+		BD8107A02358CDF2006B1A12 /* SequenceAmountDiscount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceAmountDiscount.swift; sourceTree = "<group>"; };
+		BD8107A22358CDFE006B1A12 /* SequencePercentDiscount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequencePercentDiscount.swift; sourceTree = "<group>"; };
+		BD8107A42358CE11006B1A12 /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
+		BD8107A62358CE1D006B1A12 /* TicketOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketOffice.swift; sourceTree = "<group>"; };
+		BD8107A82358CE28006B1A12 /* TicketSeller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketSeller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,13 +93,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD8107772358CC61006B1A12 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,7 +101,6 @@
 			children = (
 				BD8107582358CC5F006B1A12 /* Week2 */,
 				BD8107722358CC61006B1A12 /* Week2Tests */,
-				BD81077D2358CC61006B1A12 /* Week2UITests */,
 				BD8107572358CC5F006B1A12 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,7 +110,6 @@
 			children = (
 				BD8107562358CC5F006B1A12 /* Week2.app */,
 				BD81076F2358CC61006B1A12 /* Week2Tests.xctest */,
-				BD81077A2358CC61006B1A12 /* Week2UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +117,7 @@
 		BD8107582358CC5F006B1A12 /* Week2 */ = {
 			isa = PBXGroup;
 			children = (
+				BD81078D2358CD0C006B1A12 /* Example */,
 				BD8107592358CC5F006B1A12 /* AppDelegate.swift */,
 				BD81075B2358CC5F006B1A12 /* SceneDelegate.swift */,
 				BD81075D2358CC5F006B1A12 /* ViewController.swift */,
@@ -122,13 +139,29 @@
 			path = Week2Tests;
 			sourceTree = "<group>";
 		};
-		BD81077D2358CC61006B1A12 /* Week2UITests */ = {
+		BD81078D2358CD0C006B1A12 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				BD81077E2358CC61006B1A12 /* Week2UITests.swift */,
-				BD8107802358CC61006B1A12 /* Info.plist */,
+				BD81078E2358CD16006B1A12 /* AmountDiscount.swift */,
+				BD8107902358CD27006B1A12 /* Customer.swift */,
+				BD8107922358CD34006B1A12 /* DiscountCondition.swift */,
+				BD8107942358CD41006B1A12 /* DiscountPolicy.swift */,
+				BD8107962358CDA0006B1A12 /* Money.swift */,
+				BD8107982358CDAC006B1A12 /* Movie.swift */,
+				BD81079A2358CDB9006B1A12 /* PercentDiscount.swift */,
+				BD81079C2358CDDC006B1A12 /* Reservation.swift */,
+				BD81079E2358CDE7006B1A12 /* Screening.swift */,
+				BD8107A02358CDF2006B1A12 /* SequenceAmountDiscount.swift */,
+				BD8107A22358CDFE006B1A12 /* SequencePercentDiscount.swift */,
+				BD8107A42358CE11006B1A12 /* Theater.swift */,
+				BD8107A62358CE1D006B1A12 /* TicketOffice.swift */,
+				BD8107A82358CE28006B1A12 /* TicketSeller.swift */,
+				BD7B854823594F8C00ABEA3C /* Array+.swift */,
+				BD7B854A2359503000ABEA3C /* Dictionary+.swift */,
+				BD7B854F2359587300ABEA3C /* MemoryHashable.swift */,
+				BD7B855123595A9D00ABEA3C /* Date+.swift */,
 			);
-			path = Week2UITests;
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,24 +202,6 @@
 			productReference = BD81076F2358CC61006B1A12 /* Week2Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BD8107792358CC61006B1A12 /* Week2UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BD8107892358CC61006B1A12 /* Build configuration list for PBXNativeTarget "Week2UITests" */;
-			buildPhases = (
-				BD8107762358CC61006B1A12 /* Sources */,
-				BD8107772358CC61006B1A12 /* Frameworks */,
-				BD8107782358CC61006B1A12 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BD81077C2358CC61006B1A12 /* PBXTargetDependency */,
-			);
-			name = Week2UITests;
-			productName = Week2UITests;
-			productReference = BD81077A2358CC61006B1A12 /* Week2UITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,10 +216,6 @@
 						CreatedOnToolsVersion = 11.1;
 					};
 					BD81076E2358CC61006B1A12 = {
-						CreatedOnToolsVersion = 11.1;
-						TestTargetID = BD8107552358CC5F006B1A12;
-					};
-					BD8107792358CC61006B1A12 = {
 						CreatedOnToolsVersion = 11.1;
 						TestTargetID = BD8107552358CC5F006B1A12;
 					};
@@ -225,7 +236,6 @@
 			targets = (
 				BD8107552358CC5F006B1A12 /* Week2 */,
 				BD81076E2358CC61006B1A12 /* Week2Tests */,
-				BD8107792358CC61006B1A12 /* Week2UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,13 +258,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD8107782358CC61006B1A12 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -262,10 +265,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD7B85502359587300ABEA3C /* MemoryHashable.swift in Sources */,
+				BD8107952358CD41006B1A12 /* DiscountPolicy.swift in Sources */,
+				BD7B854B2359503000ABEA3C /* Dictionary+.swift in Sources */,
+				BD81079B2358CDB9006B1A12 /* PercentDiscount.swift in Sources */,
+				BD81079D2358CDDC006B1A12 /* Reservation.swift in Sources */,
+				BD81079F2358CDE7006B1A12 /* Screening.swift in Sources */,
+				BD8107A92358CE28006B1A12 /* TicketSeller.swift in Sources */,
+				BD81078F2358CD16006B1A12 /* AmountDiscount.swift in Sources */,
+				BD7B854923594F8C00ABEA3C /* Array+.swift in Sources */,
+				BD8107A52358CE11006B1A12 /* Theater.swift in Sources */,
+				BD8107A32358CDFE006B1A12 /* SequencePercentDiscount.swift in Sources */,
+				BD7B855223595A9D00ABEA3C /* Date+.swift in Sources */,
 				BD8107642358CC5F006B1A12 /* Week2.xcdatamodeld in Sources */,
+				BD8107972358CDA0006B1A12 /* Money.swift in Sources */,
+				BD8107992358CDAC006B1A12 /* Movie.swift in Sources */,
 				BD81075E2358CC5F006B1A12 /* ViewController.swift in Sources */,
+				BD8107A12358CDF2006B1A12 /* SequenceAmountDiscount.swift in Sources */,
+				BD8107932358CD34006B1A12 /* DiscountCondition.swift in Sources */,
+				BD8107912358CD27006B1A12 /* Customer.swift in Sources */,
 				BD81075A2358CC5F006B1A12 /* AppDelegate.swift in Sources */,
 				BD81075C2358CC5F006B1A12 /* SceneDelegate.swift in Sources */,
+				BD8107A72358CE1D006B1A12 /* TicketOffice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,14 +298,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD8107762358CC61006B1A12 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BD81077F2358CC61006B1A12 /* Week2UITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -292,11 +305,6 @@
 			isa = PBXTargetDependency;
 			target = BD8107552358CC5F006B1A12 /* Week2 */;
 			targetProxy = BD8107702358CC61006B1A12 /* PBXContainerItemProxy */;
-		};
-		BD81077C2358CC61006B1A12 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BD8107552358CC5F006B1A12 /* Week2 */;
-			targetProxy = BD81077B2358CC61006B1A12 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -514,46 +522,6 @@
 			};
 			name = Release;
 		};
-		BD81078A2358CC61006B1A12 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 576T8HK6X4;
-				INFOPLIST_FILE = Week2UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.assin.Week2UITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Week2;
-			};
-			name = Debug;
-		};
-		BD81078B2358CC61006B1A12 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 576T8HK6X4;
-				INFOPLIST_FILE = Week2UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.assin.Week2UITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Week2;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -580,15 +548,6 @@
 			buildConfigurations = (
 				BD8107872358CC61006B1A12 /* Debug */,
 				BD8107882358CC61006B1A12 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BD8107892358CC61006B1A12 /* Build configuration list for PBXNativeTarget "Week2UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BD81078A2358CC61006B1A12 /* Debug */,
-				BD81078B2358CC61006B1A12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
