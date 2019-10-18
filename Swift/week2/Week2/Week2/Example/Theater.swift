@@ -89,14 +89,3 @@ class Theater: MemoryHashable {
         return Reservation(theater: self, movie: movie, screening: screening, count: count)
     }
 }
-
-//extension Theater: Hashable {
-//    static func == (lhs: Theater, rhs: Theater) -> Bool {
-//        return lhs.hashValue == rhs.hashValue
-//    }
-//    func hash(into hasher: inout Hasher) {
-//        hasher.combine(self.movies)
-//        hasher.combine(self.ticketOffices)
-//    }
-//
-//}

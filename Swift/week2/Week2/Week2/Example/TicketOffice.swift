@@ -50,12 +50,3 @@ class TicketOffice: MemoryHashable {
         return reservation
     }
 }
-
-//extension TicketOffice: Hashable {
-//    static func == (lhs: TicketOffice, rhs: TicketOffice) -> Bool {
-//        return lhs.amount === rhs.amount && lhs.commissionRate == rhs.commissionRate
-//    }
-//    func hash(into hasher: inout Hasher) {
-//        hasher.combine(self.commissionRate)
-//    }
-//}

@@ -8,9 +8,14 @@
 
 import Foundation
 
+/*
+ DiscountPolicy 는 Markup interface 이다.
+ 
+ */
 protocol DiscountPolicy {
     
 }
+
 protocol AMOUNT: DiscountPolicy {
     
 }
