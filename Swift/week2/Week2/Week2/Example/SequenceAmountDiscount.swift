@@ -9,17 +9,18 @@
 import Foundation
 
 class SequenceAmountDiscount: AmountDiscount {
+    var amount: Money
+    
     let sequence: Int
 
-    public init(amount: Money, sequence: Int) {
+    required init(amount: Money, sequence: Int) {
         self.sequence = sequence
-        super.init(amount: amount)
+        self.amount = amount
     }
     
-    override func isSatisfiedBy(screening: Screening, audienceCount: Int) -> Bool {
+    func isSatisfiedBy(screening: Screening, audienceCount: Int) -> Bool {
         return screening.sequence == sequence
     }
-    
 }
 
 /*

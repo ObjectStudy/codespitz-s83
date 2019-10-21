@@ -8,19 +8,15 @@
 
 import Foundation
 
-class PercentDiscount: PERCENT, DiscountCondition {
-    
-    private let percent: Double
+protocol PercentDiscount: PERCENT, DiscountCondition {
 
-    public init(percent: Double) {
-        self.percent = percent
-    }
-    
+    var percent: Double { get }
+
+    init(percent: Double, sequence: Int)
+}
+
+extension PercentDiscount {
     func calculateFee(fee: Money) -> Money {
-          return fee.minus(amount: fee.multi(times: percent))
-      }
-      
-      func isSatisfiedBy(screening: Screening, audienceCount: Int) -> Bool {
-          fatalError("Not Imple")
-      }
+        return fee.minus(amount: fee.multi(times: percent))
+    }
 }

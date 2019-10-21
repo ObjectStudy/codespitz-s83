@@ -8,19 +8,17 @@
 
 import Foundation
 
-class AmountDiscount: AMOUNT, DiscountCondition {
-    private let amount: Money
+protocol AmountDiscount: AMOUNT, DiscountCondition {
+    var amount: Money { get }
 
-    public init(amount: Money) {
-        self.amount = amount
-    }
+    init(amount: Money, sequence: Int)
     
+    func isSatisfiedBy(screening: Screening, audienceCount: Int) -> Bool
+}
+
+extension AmountDiscount {
     func calculateFee(fee: Money) -> Money {
         return fee.minus(amount: amount)
     }
-    
-    func isSatisfiedBy(screening: Screening, audienceCount: Int) -> Bool {
-           fatalError("Not Imple")
-     }
-     
 }
+

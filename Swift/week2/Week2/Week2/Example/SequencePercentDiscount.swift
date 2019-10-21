@@ -9,15 +9,16 @@
 import Foundation
 
 class SequencePercentDiscount: PercentDiscount {
+    var percent: Double
     
-    private let sequence: Int
+    let sequence: Int
 
-    public init(percent: Double, sequence: Int) {
+    required init(percent: Double, sequence: Int) {
         self.sequence = sequence
-        super.init(percent: percent)
+        self.percent = percent
     }
     
-    override func isSatisfiedBy(screening: Screening, audienceCount: Int) -> Bool {
+    func isSatisfiedBy(screening: Screening, audienceCount: Int) -> Bool {
         return screening.sequence == sequence
     }
 }
